@@ -19,10 +19,17 @@ function test3() {
     console.log(range(40, 90, 20)); // => [40, 60, 80]
 }
 
+function test4() {
+    let text = "bar qux baz foo bar foo qux foo";
+    console.log(nbOccurences(text, "foo")); // => 3
+    console.log(nbOccurences(text, "quux")); // => 0
+    console.log(nbOccurences(text, "baz")); // => 1
+}
+
 function tabTest() {
     test1();
     test12();
     test2();
     test3();
-
+    test4();
 }
