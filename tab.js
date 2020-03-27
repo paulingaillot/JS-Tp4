@@ -15,3 +15,16 @@ function sumc(numbers) {
     }
     return result;
 }
+
+function longestWord(words) {
+
+    let max = 0;
+    let result = "";
+    for (let word of words) {
+        if (word.length > max) {
+            result = word;
+            max = word.length;
+        }
+    }
+    return result;
+}
