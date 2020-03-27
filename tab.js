@@ -28,3 +28,15 @@ function longestWord(words) {
     }
     return result;
 }
+
+function range(min, max, step) {
+
+    let tab = [];
+    let value = min;
+    for (let i = 0; i <= (max - min); i++) {
+        tab[i] = value;
+        value = value + step;
+        if (value > max) return tab;
+    }
+    return tab;
+}
