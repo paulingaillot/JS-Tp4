@@ -39,6 +39,10 @@ function test5() {
     ])); // [1, 2, 3, 4, 5, 6]
 }
 
+function test6() {
+    exo6(["Bob", "Julien", "Roger"]);
+}
+
 function tabTest() {
     test1();
     test12();
@@ -46,4 +50,5 @@ function tabTest() {
     test3();
     test4();
     test5();
+    test6();
 }

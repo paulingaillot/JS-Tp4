@@ -63,3 +63,11 @@ function flatten2D(array) {
     return tab;
 
 }
+
+function exo6(tab) {
+
+    console.log(tab.join(", "));
+    tab.pop();
+    tab.push("Paulin");
+    console.log(tab.join(", "));
+}
