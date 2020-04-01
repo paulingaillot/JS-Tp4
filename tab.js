@@ -93,11 +93,13 @@ function cryptage(mess, dec) {
     let res = "";
     for (let val of mess) {
         let i = 0;
-        while (val != alphabet[i]) {
-            i++;
-        }
-        i = (i + dec) % 26;
-        res = res + alphabet[i];
+        if (val != ' ') {
+            while (val != alphabet[i]) {
+                i++;
+            }
+            i = (i + dec) % 26;
+            res = res + alphabet[i];
+        } else res = res + " ";
     }
     console.log(res);
 }
@@ -109,12 +111,66 @@ function decryptage(mess, dec) {
     let res = "";
     for (let val of mess) {
         let i = 0;
-        while (val != alphabet[i]) {
-            i++;
-        }
-        i = (i - dec);
-        if (i < 0) i = i + 26;
-        res = res + alphabet[i];
+        if (val != ' ') {
+            while (val != alphabet[i]) {
+                i++;
+            }
+            i = (i - dec);
+            if (i < 0) i = i + 26;
+            res = res + alphabet[i];
+        } else res = res + " ";
+    }
+    console.log(res);
+
+}
+
+function cryptageVi(mess, dec) {
+
+    mess = mess.toLowerCase();
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let res = "";
+
+    let cd = 0;
+    let cdm = dec.length - 1;
+
+    for (let val of mess) {
+        let i = 0;
+        if (val != ' ') {
+            while (val != alphabet[i]) {
+                i++;
+            }
+            i = (i + dec[cd]) % 26;
+            res = res + alphabet[i];
+
+            if (cd == cdm) cd = 0;
+            else cd++;
+        } else res = res + " ";
+    }
+    console.log(res);
+}
+
+function decryptageVi(mess, dec) {
+
+    mess = mess.toLowerCase();
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let res = "";
+
+    let cd = 0;
+    let cdm = dec.length - 1;
+
+    for (let val of mess) {
+        let i = 0;
+        if (val != ' ') {
+            while (val != alphabet[i]) {
+                i++;
+            }
+            i = (i - dec[cd]);
+            if (i < 0) i = i + 26;
+            res = res + alphabet[i];
+
+            if (cd == cdm) cd = 0;
+            else cd++;
+        } else res = res + " ";
     }
     console.log(res);
 

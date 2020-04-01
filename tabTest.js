@@ -48,8 +48,13 @@ function test7() {
 }
 
 function test8() {
-    cryptage("salutz", 3);
-    decryptage("hola", 3);
+    cryptage("Attaquez Asterix", 3);
+    decryptage("dwwdtxhc dvwhula", 3);
+}
+
+function test9() {
+    cryptageVi("Attaquez Asterix", [3, 1, 4]);
+    decryptageVi("duxdryha evuiujb", [3, 1, 4]);
 }
 
 function tabTest() {
@@ -62,4 +67,5 @@ function tabTest() {
     test6();
     test7();
     test8();
+    test9();
 }
