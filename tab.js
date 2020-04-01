@@ -49,3 +49,17 @@ function nbOccurences(wordList, word) {
     }
     return occur;
 }
+
+function flatten2D(array) {
+
+    let tab = [];
+    let i = 0;
+    for (let tab1 of array) {
+        for (let value of tab1) {
+            tab[i] = value;
+            i++;
+        }
+    }
+    return tab;
+
+}

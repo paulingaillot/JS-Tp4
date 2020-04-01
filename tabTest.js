@@ -26,10 +26,24 @@ function test4() {
     console.log(nbOccurences(text, "baz")); // => 1
 }
 
+function test5() {
+    console.log(flatten2D([
+        [1, 2],
+        [3, 4],
+        [5, 6]
+    ])); // [1, 2, 3, 4, 5, 6]
+    console.log(flatten2D([
+        [1, 2],
+        [3, 4, 5],
+        [6]
+    ])); // [1, 2, 3, 4, 5, 6]
+}
+
 function tabTest() {
     test1();
     test12();
     test2();
     test3();
     test4();
+    test5();
 }
