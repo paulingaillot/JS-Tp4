@@ -71,3 +71,17 @@ function exo6(tab) {
     tab.push("Paulin");
     console.log(tab.join(", "));
 }
+
+function exo7() {
+
+
+    let tab = [];
+    for (let i = 1; i < 10; i++) {
+        let tab1 = [];
+        for (let j = 1; j < 10; j++) {
+            tab1[j] = i * j;
+        }
+        tab[i] = tab1;
+    }
+
+}

@@ -43,6 +43,10 @@ function test6() {
     exo6(["Bob", "Julien", "Roger"]);
 }
 
+function test7() {
+    exo7();
+}
+
 function tabTest() {
     test1();
     test12();
@@ -51,4 +55,5 @@ function tabTest() {
     test4();
     test5();
     test6();
+    test7();
 }
