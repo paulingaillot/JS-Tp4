@@ -72,6 +72,16 @@ function exo6(tab) {
     console.log(tab.join(", "));
 }
 
+function printArray(array) {
+    for (let tab of array) {
+        let res = "";
+        for (let val of tab) {
+            res = res + " " + val;
+        };
+        console.log(res);
+    }
+}
+
 function exo7() {
 
 
@@ -79,11 +89,11 @@ function exo7() {
     for (let i = 1; i < 10; i++) {
         let tab1 = [];
         for (let j = 1; j < 10; j++) {
-            tab1[j] = i * j;
+            tab1[(j - 1)] = i * j;
         }
-        tab[i] = tab1;
+        tab[(i - 1)] = tab1;
     }
-
+    printArray(tab)
 }
 
 function cryptage(mess, dec) {
