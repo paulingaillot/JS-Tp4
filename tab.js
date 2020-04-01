@@ -85,3 +85,37 @@ function exo7() {
     }
 
 }
+
+function cryptage(mess, dec) {
+
+    mess = mess.toLowerCase();
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let res = "";
+    for (let val of mess) {
+        let i = 0;
+        while (val != alphabet[i]) {
+            i++;
+        }
+        i = (i + dec) % 26;
+        res = res + alphabet[i];
+    }
+    console.log(res);
+}
+
+function decryptage(mess, dec) {
+
+    mess = mess.toLowerCase();
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let res = "";
+    for (let val of mess) {
+        let i = 0;
+        while (val != alphabet[i]) {
+            i++;
+        }
+        i = (i - dec);
+        if (i < 0) i = i + 26;
+        res = res + alphabet[i];
+    }
+    console.log(res);
+
+}

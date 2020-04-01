@@ -47,6 +47,11 @@ function test7() {
     exo7();
 }
 
+function test8() {
+    cryptage("salutz", 3);
+    decryptage("hola", 3);
+}
+
 function tabTest() {
     test1();
     test12();
@@ -56,4 +61,5 @@ function tabTest() {
     test5();
     test6();
     test7();
+    test8();
 }
